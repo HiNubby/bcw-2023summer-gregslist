@@ -1,7 +1,7 @@
 import { generateId } from "../utils/generateId.js"
 
 export class Car {
-  constructor (data) {
+  constructor(data) {
     // NOTE generates a unique identifier so we can find specific items in our appstate
     this.id = generateId()
     this.img = data.img
@@ -19,7 +19,7 @@ export class Car {
   }
 
 
-  get CardTemplate() {
+  get HTMLTemplate() {
     return `
     <div class="col-10 m-auto mb-3">
       <section class="row bg-light elevation-5 car-border" style="border-color: ${this.color};">

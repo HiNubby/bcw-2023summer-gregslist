@@ -4,10 +4,12 @@ import { HomeController } from "./controllers/HomeController.js";
 import { HousesController } from "./controllers/HousesController.js";
 import { JobsController } from "./controllers/JobsController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
+import { WatchlistController } from "./controllers/WatchlistController.js";
 import { AboutView } from "./views/AboutView.js";
 import { CarView } from "./views/CarView.js";
 import { HouseView } from "./views/HouseView.js";
 import { JobView } from "./views/JobView.js";
+import { WatchlistView } from "./views/WatchlistView.js";
 
 
 export const router = [
@@ -33,12 +35,17 @@ export const router = [
   },
   {
     path: '#/houses',
-    controller: HousesController,
+    controller: [HousesController, WatchlistController],
     view: HouseView
   },
   {
     path: '#/jobs',
-    controller: JobsController,
+    controller: [JobsController, WatchlistController],
     view: JobView
-  }
+  },
+  {
+    path: '#/watchlist',
+    controller: WatchlistController,
+    view: WatchlistView
+  },
 ]

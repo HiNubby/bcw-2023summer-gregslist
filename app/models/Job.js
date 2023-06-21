@@ -1,20 +1,20 @@
 import { generateId } from "../utils/generateId.js"
 
 export class Job {
-    constructor(data) {
-        this.id = data.id || generateId()
-        this.name = data.name
-        this.position = data.position
-        this.payRate = data.payRate
-        this.company = data.company
-        this.description = data.description
-        this.imgUrl = data.imgUrl
-        this.listingDate = data.listingDate ? new Date(data.listingDate) : new Date()
-    }
+  constructor(data) {
+    this.id = data.id || generateId()
+    this.name = data.name
+    this.position = data.position
+    this.payRate = data.payRate
+    this.company = data.company
+    this.description = data.description
+    this.imgUrl = data.imgUrl
+    this.listingDate = data.listingDate ? new Date(data.listingDate) : new Date()
+  }
 
 
-    get HTMLTemplate() {
-        return `
+  get HTMLTemplate() {
+    return `
         <div class="col-10 m-auto mb-3">
         <section class="row bg-light elevation-5">
           <div class="col-12 col-md-4 p-0">
@@ -29,9 +29,10 @@ export class Job {
             <p>${this.description}</p>
             <h5>${this.listingDate.toLocaleString()}</h5>
             <button onclick="app.JobsController.deleteJob('${this.id}')" class="btn btn-danger mt-2">Delete Listing</button>
+            <button onclick="app.WatchlistController.addToWatchlist('${this.id}')" class="btn btn-success mt-2">Add to Watchlist!</button>
           </div>
         </section>
       </div>
         `
-    }
+  }
 }

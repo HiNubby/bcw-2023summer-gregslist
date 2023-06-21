@@ -21,6 +21,9 @@ class ObservableAppState extends EventEmitter {
   /** @type {import('./models/Job.js').Job[]} */
   jobs = loadState('jobs', [Job])
 
+  watchlist = [
+  ]
+
   // NOTE Used to load initial data
   init() {
 

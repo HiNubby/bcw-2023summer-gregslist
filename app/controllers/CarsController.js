@@ -8,14 +8,14 @@ function _drawCars() {
   const cars = AppState.cars
   let template = ''
 
-  cars.forEach(car => template += car.CardTemplate)
+  cars.forEach(car => template += car.HTMLTemplate)
 
   setHTML('carListings', template)
 }
 
 
 export class CarsController {
-  constructor () {
+  constructor() {
     // SECTION page load
     console.log('Cars Controller is loaded, here are the cars', AppState.cars);
     _drawCars()
