@@ -1,15 +1,21 @@
 /* BASIC STYLES HERE */
-.car-img{
+.car-img {
   width: 100%;
   object-fit: cover;
   height: 100%;
 }
 
-.car-border{
+.listing-img {
+  width: 100%;
+  object-fit: cover;
+  height: 40vh
+}
+
+.car-border {
   border-style: solid;
   border-width: .4em;
 }
 
-label{
+label {
   display: block;
 }

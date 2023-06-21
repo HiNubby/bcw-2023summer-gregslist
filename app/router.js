@@ -1,9 +1,13 @@
 import { AboutController } from "./controllers/AboutController.js";
 import { CarsController } from "./controllers/CarsController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { HousesController } from "./controllers/HousesController.js";
+import { JobsController } from "./controllers/JobsController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
 import { CarView } from "./views/CarView.js";
+import { HouseView } from "./views/HouseView.js";
+import { JobView } from "./views/JobView.js";
 
 
 export const router = [
@@ -26,7 +30,15 @@ export const router = [
     path: '#/cars',
     controller: CarsController,
     view: CarView
+  },
+  {
+    path: '#/houses',
+    controller: HousesController,
+    view: HouseView
+  },
+  {
+    path: '#/jobs',
+    controller: JobsController,
+    view: JobView
   }
-
-  // FIXME write a new object that will load a housescontroller when you navigate to it
 ]
